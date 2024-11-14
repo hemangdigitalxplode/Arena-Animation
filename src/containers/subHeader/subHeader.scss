@@ -5,7 +5,8 @@
   background-position-y: center;
   background-size: 100%;
   padding-top: 40px;
-  height: 76rem;
+  // height: 76rem;
+
   .top-of-absolute {
     background-image: url("../../assets/img1.png");
     background-repeat: no-repeat;
@@ -22,6 +23,7 @@
     background-size: 40%;
     z-index: 5;
   }
+
   .heading-subheader {
     color: white;
     padding-left: 50px;
@@ -32,30 +34,37 @@
     letter-spacing: -6px;
     word-spacing: 4px;
   }
+
   .paraContainer {
     display: flex;
     color: #ffffff;
     font-family: "Outfit", sans-serif;
     font-size: 21px;
     line-height: 1.5;
-    padding: 5% 50px;
+    padding: 4% 50px;
     gap: 40px;
+
     .paraContainer-left {
+
       // margin-top: 250px;
       .paraContainer-left-first {
         padding-bottom: 30px;
       }
     }
+
     .paraContainer-right {
       padding-top: 25%;
+
       .knowMore {
         cursor: pointer;
         display: flex;
+
         .knowMore-text {
           padding-top: 20px;
           font-weight: 500;
           text-decoration: underline;
         }
+
         .arrow-knowMore {
           width: 52px;
           height: 52px;
@@ -67,9 +76,33 @@
   }
 }
 
+.seoCont {
+  
+  padding: 0 0px;
+  margin-top:  12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.seoContainer{
+  padding-left: 0 !important;
+}
+
+@media screen and (max-width:992px) {
+  .seoCont {
+    padding: 0 0px;
+    margin-top: 15px;
+  }
+  .seoContainer{
+    padding-left: 0 !important;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .subHeadingBackground {
     height: fit-content;
+
     // padding-bottom: 40px;
     // padding-top: 100px;
     .heading-subheader {
@@ -79,12 +112,15 @@
       padding-left: 0px;
       letter-spacing: -2px;
     }
+
     .paraContainer {
       flex-direction: column;
       padding: 10px 0 0;
+
       // font-size: 3.4rem;
       .paraContainer-right {
         padding-top: 0px;
+
         .knowMore {
           .arrow-knowMore {
             width: 80px;
@@ -101,6 +137,7 @@
 @media screen and (max-width: 540px) {
   .subHeadingBackground {
     height: fit-content;
+
     // padding-bottom: 40px;
     // padding-top: 100px;
     .heading-subheader {
@@ -109,12 +146,15 @@
       width: 90%;
       padding-left: 0px;
     }
+
     .paraContainer {
       flex-direction: column;
       padding: 10px 0 0;
+
       // font-size: 3.4rem;
       .paraContainer-right {
         padding-top: 0px;
+
         .knowMore {
           .arrow-knowMore {
             width: 80px;

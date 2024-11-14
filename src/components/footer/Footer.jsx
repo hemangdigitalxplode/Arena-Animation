@@ -159,11 +159,11 @@ const Footer = ({ centers, handleShow, handleCall, phoneNo }) => {
               <Col xs={12} md={6}>
                 <div style={styles.testimonialBox}>
                   <Image
-                    src="https://lh3.googleusercontent.com/a/ACg8ocKq9kSINRZDjFBvxhV6PwITKEioFgv6hq3AbgXhhsQFgY6yyA=w45-h45-p-rp-mo-br100"
+                    src="https://lh3.googleusercontent.com/a-/ALV-UjXB89vyMYtAOG3tiO4ayP8AwwLAvy510t6IfxFQ324ZGAzUQU8L=w75-h75-p-rp-mo-br100"
                     roundedCircle
                     style={styles.testimonialImage}
                   />
-                  <h3 style={styles.heading}>Jitanshu Tomar</h3>
+                  <h3 style={styles.heading}>Prateek Solanki</h3>
                   <p style={styles.testimonialText}>
                     Arena Animation Preet Vihar exceeded my expectations in
                     terms of quality education. The courses are well-structured,
@@ -176,11 +176,11 @@ const Footer = ({ centers, handleShow, handleCall, phoneNo }) => {
               <Col xs={12} md={6}>
                 <div style={styles.testimonialBox}>
                   <Image
-                    src="https://lh3.googleusercontent.com/a/ACg8ocKq7aKOJk27aFu-Z7VC8bXjqeo1cZ5_Zqg_p9gNDMAFEQffdA=w45-h45-p-rp-mo-br100"
+                    src="https://lh3.googleusercontent.com/a-/ALV-UjW0ghYSiQZorrKPOhBElR1rbU-x7yrO-hXq9C8xup2xt3axgfFp=w75-h75-p-rp-mo-br100"
                     roundedCircle
                     style={styles.testimonialImage}
                   />
-                  <h3 style={styles.heading}>Keshav Verma</h3>
+                  <h3 style={styles.heading}>Arjun Kapasia</h3>
                   <p style={styles.testimonialText}>
                   Arena Institute is the Best Institute for Animation Courses in Noida for learning and growing professionally. They have the best faculty you can learn with. Teaching updated software is not the only delight of it, you will also learn how to develop your professional character for your future.
                   </p>
