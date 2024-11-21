@@ -26,7 +26,6 @@
     margin: 5px;
     border-radius: 22px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
   }
 
   .textClr {
@@ -39,7 +38,7 @@
     font-size: 14px;
   }
 
-  
+
 
   .address-main-div {
     font-family: 'Outfit', sans-serif;
@@ -79,6 +78,31 @@
     font-size: 14px;
   }
 
+  .bottomDivFix {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    
+
+    .bottomBtn {
+      height: 50px;
+      width: 50%;   
+      border: none;
+    } 
+  }
+
+  #applyNow{
+    background-color: #ffff00;
+  }
+
+
+
+
   .copyRight {
     font-family: 'Outfit', sans-serif;
     font-weight: 300;
@@ -91,7 +115,8 @@
     margin-bottom: 3rem;
   }
 }
-.headingFont{
+
+.headingFont {
   font-size: clamp(1rem, 5vw, 2rem);
 
 }
@@ -110,7 +135,7 @@
   height: 150px;
   object-fit: cover;
 }
- 
+
 
 .testimonial-text {
   color: white;
@@ -142,18 +167,62 @@
   color: white;
 }
 
-
+.contact-info-2 {
+  font-family: "BrbasNeueSemiExpandedBold";
+    border-top: 1px solid #fff;
+    border-bottom: 0.2px solid #fff;
+    margin: 0px 0;
+    padding: 32px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    position: fixed; 
+    bottom: 0;
+    display: none;
+}
+.bottomPatti{
+  display: block;
+}
 
 @media screen and (max-width: 540px) {
+  .bottomDivFix{
+    display: block;
+  }
   .footerContainer {
     .address-main-div {
       // font-size: 2rem;
     }
 
+
     .contact-info {
       // font-size: 2.4rem;
+      display: none;
       flex-direction: column;
       padding: 20px;
+    }
+    .contact-info-2 {
+      font-family: "BrbasNeueSemiExpandedBold";
+        border-top: 1px solid #fff;
+        border-bottom: 0.2px solid #fff;
+        margin: 0px 0;
+        padding: 32px;
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        position: fixed; 
+        bottom: 0;
+        display: block;
+    }
+    .button-div-bottom button{
+      border: none;
+    }
+
+    .bottomPatti{
+      display: none;
     }
 
     .copyRight {

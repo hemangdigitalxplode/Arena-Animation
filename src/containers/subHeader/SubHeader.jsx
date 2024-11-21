@@ -7,7 +7,6 @@ import { YellowArrow } from "../../assets";
 const SubHeader = ({ bestanimationcms }) => {
 
   const [isOpen, setIsOpen] = useState(false)
-  const [buttonText, setButtonText] = useState('Read More')
 
   const toggleReadMore = () => {
     setIsOpen(!isOpen)

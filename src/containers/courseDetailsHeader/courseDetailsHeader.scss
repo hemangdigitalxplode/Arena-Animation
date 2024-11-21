@@ -5,16 +5,20 @@
   background-position-y: 40px;
   background-size: 45%;
   height: 41rem;
+
   .couseDetailsHeader-container {
     padding-top: 40px;
+
     .couseDetailsHeader-title {
       width: 100%;
       padding-top: 12px;
     }
+
     .couseDetailsHeader-content {
       width: 50%;
       float: right;
       font-family: "Outfit", sans-serif;
+
       .couseDetailsHeader-content-top {
         padding-top: 30px;
         text-transform: uppercase;
@@ -23,31 +27,39 @@
         font-weight: 600;
         font-size: 1.4rem;
       }
+
       .couseDetailsHeader-content-top-text:first-child {
         padding-right: 30px;
+        font-size: 16px;
       }
+
       .couseDetailsHeader-button {
         padding-top: 14px;
         display: flex;
         gap: 18px;
         font-size: 0.75rem;
       }
+
       .couseDetailsHeader-paras {
+        // margin-top: 30rem;
         padding-top: 30px;
         display: flex;
         flex-direction: column;
         gap: 40px;
         color: #9b9b9b;
         font-size: 1.2rem;
+
         span {
           color: #fff;
         }
       }
     }
   }
+
   .knowMore {
     cursor: pointer;
     display: flex;
+
     .knowMore-text {
       padding-top: 20px;
 
@@ -55,6 +67,7 @@
       color: #fff;
       text-decoration: underline;
     }
+
     .arrow-knowMore {
       width: 42px;
       height: 42px;
@@ -70,11 +83,14 @@
     background-position-y: 50px;
     background-size: 100%;
     height: fit-content;
+
     .couseDetailsHeader-container {
+
       // padding-top: 50px;
       .couseDetailsHeader-content {
         float: none;
         width: 100%;
+
         .couseDetailsHeader-paras {
           // font-size: 3rem;
           color: #fff;
@@ -83,20 +99,41 @@
     }
   }
 }
-.breadcrumb{
+
+.breadcrumb {
   padding: 10px 20px;
   text-align: center;
   display: block ruby;
 }
-.course-details nav{
+
+.course-details nav {
   background: yellow;
   margin-top: 30px;
 }
-.course-details{
+
+.course-details {
   padding: 0px;
 }
+
 .breadcrumb-item+.breadcrumb-item::before {
   float: inherit;
+}
+
+.mobile-bg-img {
+  display: none;
+}
+
+.dekstop-div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.dekstop-bg-img{
+  width: 50%;
+}
+.mobile-div{
+  display: none;
 }
 
 @media screen and (max-width: 540px) {
@@ -105,17 +142,21 @@
     background-position-y: 50px;
     background-size: 100%;
     height: fit-content;
+
     .couseDetailsHeader-container {
+
       // padding-top: 50px;
       .couseDetailsHeader-content {
         float: none;
         width: 100%;
+
         .couseDetailsHeader-paras {
           // font-size: 3rem;
           color: #fff;
         }
       }
     }
+
     .knowMore {
       .arrow-knowMore {
         width: 80px;
@@ -124,5 +165,16 @@
         padding-top: 30px;
       }
     }
+  }
+
+  .mobile-bg-img {
+    display: block;
+    margin-top: 20px;
+  }
+  .dekstop-div{
+    display: none;
+  }
+  .mobile-div{
+    display: block;
   }
 }

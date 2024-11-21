@@ -18,7 +18,7 @@ console.log(careerOptions)
     <Container className="CareerOptions">
       {/* <div className="CareerOptions container-default"> */}
       <div className="title CareerOptions-title">Career Options</div>
-      <Row className="careerOption-content">
+      <Row className="careerOption-content m-0">
         <Col lg={3} className="careerOption-content-nav">
           {careerOptions &&
             careerOptions?.map((i) => (

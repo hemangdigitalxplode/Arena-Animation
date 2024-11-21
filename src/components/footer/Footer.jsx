@@ -130,7 +130,7 @@ const Footer = ({ centers, handleShow, handleCall, phoneNo }) => {
                   />
                   <h3 style={styles.heading}>Gagan Singh</h3>
                   <p style={styles.testimonialText}>
-                  I want to Thanks Arena Animaton. recently I got selected in Kuku FM and got a handsome sallery package. It's like dream come true for me and it's all happened because of the Top Institute for Animation Courses in Noida - Arena Animaton. The faculty is very supportive, friendly.
+                    I want to Thanks Arena Animaton. recently I got selected in Kuku FM and got a handsome sallery package. It's like dream come true for me and it's all happened because of the Top Institute for Animation Courses in Noida - Arena Animaton. The faculty is very supportive, friendly.
                   </p>
                 </div>
               </Col>
@@ -182,7 +182,7 @@ const Footer = ({ centers, handleShow, handleCall, phoneNo }) => {
                   />
                   <h3 style={styles.heading}>Arjun Kapasia</h3>
                   <p style={styles.testimonialText}>
-                  Arena Institute is the Best Institute for Animation Courses in Noida for learning and growing professionally. They have the best faculty you can learn with. Teaching updated software is not the only delight of it, you will also learn how to develop your professional character for your future.
+                    Arena Institute is the Best Institute for Animation Courses in Noida for learning and growing professionally. They have the best faculty you can learn with. Teaching updated software is not the only delight of it, you will also learn how to develop your professional character for your future.
                   </p>
                 </div>
               </Col>
@@ -306,7 +306,7 @@ const Footer = ({ centers, handleShow, handleCall, phoneNo }) => {
                     to="https://animationdelhincr.com/about-us"
                     className="customFont"
                   >
-                  About Us
+                    About Us
                   </Link>
                   <Link
                     rel="canonical"
@@ -334,7 +334,7 @@ const Footer = ({ centers, handleShow, handleCall, phoneNo }) => {
                     to="https://animationdelhincr.com/terms-&-conditions"
                     className="customFont"
                   >
-                  Terms & Conditions
+                    Terms & Conditions
                   </Link>
                 </div>
               </div>
@@ -372,45 +372,67 @@ const Footer = ({ centers, handleShow, handleCall, phoneNo }) => {
             </Col>
           </Row>
         </Container>
+        <div className="bottomPatti">
+          <div className="contact-info">
+            <Dropdown className="ms-3">
+              <Dropdown.Toggle
+                className="btn-0"
+                variant="success"
+                id="dropdown-basic"
+              >
+                <Button title={` Call Now `} onClick={handleCall} />
+              </Dropdown.Toggle>
 
-        <div className="contact-info">
-          <Dropdown className="ms-3">
-            <Dropdown.Toggle
-              className="btn-0"
-              variant="success"
-              id="dropdown-basic"
-            >
-              <Button title={` Call Now `} onClick={handleCall} />
-            </Dropdown.Toggle>
-
-            <Dropdown.Menu className="menuitems p-2">
-              <Link to="tel:+918585908968" className="text-white">
-                {" "}
-                <BsFillTelephoneFill
-                  className="h1 text-white"
-                  style={{ fontSize: "18px", margin: "6px 0px" }}
-                />{" "}
-                DELHI CENTRE
-                <br />{" "}
-              </Link>
-              <Link to="tel:+917290098162" className="text-white">
-                {" "}
-                <BsFillTelephoneFill
-                  className="h1 text-white"
-                  style={{ fontSize: "18px", margin: "6px 0px" }}
-                />{" "}
-                NOIDA CENTRE <br />
-              </Link>
-              {/* <Link to="tel:+918800012691" className="text-white"> <BsFillTelephoneFill className="h1 text-white" style={{fontSize:"18px",margin:"6px 0px"}} /> CHANDIGARH CENTRE </Link>  */}
-            </Dropdown.Menu>
-          </Dropdown>
-          <Link to="#applybutton">
-            <Button title="Apply Now" />
-          </Link>
-          <Link to="https://wa.me/+919599200261">
-            <Button title="WhatsApp" />
-          </Link>
+              <Dropdown.Menu className="menuitems p-2">
+                <Link to="tel:+918585908968" className="text-white">
+                  {" "}
+                  <BsFillTelephoneFill
+                    className="h1 text-white"
+                    style={{ fontSize: "18px", margin: "6px 0px" }}
+                  />{" "}
+                  DELHI CENTRE
+                  <br />{" "}
+                </Link>
+                <Link to="tel:+917290098162" className="text-white">
+                  {" "}
+                  <BsFillTelephoneFill
+                    className="h1 text-white"
+                    style={{ fontSize: "18px", margin: "6px 0px" }}
+                  />{" "}
+                  NOIDA CENTRE <br />
+                </Link>
+                <Link to="tel:+918800012691" className="text-white"> <BsFillTelephoneFill className="h1 text-white" style={{ fontSize: "18px", margin: "6px 0px" }} /> CHANDIGARH CENTRE </Link>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Link to="#applybutton">
+              <Button title="Apply Now" />
+            </Link>
+            <Link to="https://wa.me/+919599200261">
+              <Button title="WhatsApp" />
+            </Link>
+          </div>
         </div>
+
+
+
+        {/* <div className="contact-info-2">
+          <div className="button-div-bottom">
+            <button>Download Brochure</button> 
+          </div>
+           
+
+
+        </div> */}
+
+
+        {/* Fixed bottom CTA for mobile only */}
+        {/* <div className="">
+          <div className="bottomDivFix">
+            <button id="applyNow" className="bottomBtn">Apply Now</button>
+            <button className="bottomBtn">Whatsapp</button>
+          </div>
+        </div> */}
+
         <div className="copyRight mt-4">
           Copyright © {currentYear}. Digital Xplode All Rights Reserved.
         </div>

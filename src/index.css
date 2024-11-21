@@ -31,11 +31,11 @@
 
 body {
   margin: 0px !important;
-  min-width: fit-content !important;
+  min-width: 100% !important;
 }
 
 #root {
-  min-width: fit-content !important;
+  min-width: 100% !important;
 }
 
 input::-webkit-outer-spin-button,
