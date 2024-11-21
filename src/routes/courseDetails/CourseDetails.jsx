@@ -132,6 +132,13 @@ const CourseDetails = ({ handleShow }) => {
         "Arena Animation is here with the top courses with enhance your skills in animation, VFX, graphic and multimedia for a fruitful career in the industry. Enroll now!",
       path: "/course-details/visual-content-development-for-print-and-social-media",
     },
+    {
+      title:
+        "Degree courses in VFX | VFX Institute in Noida and Delhi NCR",
+      description:
+        "Choose from the best degree courses in VFX. Create amazing visual effects for movies and videos. Learn about advanced and modern tools. Join Arena Animation now.",
+      path: "/course-details/degree-course-in-vfx",
+    },
   ];
   const location = useLocation();
   const route = routes.find((route) => route.path === location.pathname);
