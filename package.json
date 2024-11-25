@@ -38,7 +38,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "npm run generate-sitemap && react-scripts build",
-    "postbuild": "react-snap",
+    
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "serve -s build",

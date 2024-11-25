@@ -14,7 +14,15 @@ const CourseDetailsHeader = ({
   brouchure,
   handleShow,
 }) => {
+
+
   console.log(`The Title of Course Page is ${title}`)
+
+  // setTimeout(() => {
+  //   console.log(`The Title of Course Page is ${title}`);
+  // }, 10000);
+
+
   return (
     <>
 
