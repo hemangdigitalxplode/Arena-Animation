@@ -1,5 +1,5 @@
 .course-highlights{
-    padding-top: 50px;
+    padding-top: 20px;
     .course-highlights-title{
         text-align: center;
     }
@@ -22,7 +22,12 @@
 }
 
 @media screen and (max-width: 540px) {
+
     .course-highlights{
+        padding-top: 40px;
+    }
+    .course-highlights{
+        
         .course-highlights-points{
             .course-highlights-point{
                 .Black-Tick{

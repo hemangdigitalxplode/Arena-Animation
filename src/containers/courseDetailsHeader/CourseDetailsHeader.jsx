@@ -14,7 +14,7 @@ const CourseDetailsHeader = ({
   brouchure,
   handleShow,
 }) => {
-  console.log(bgURL)
+  console.log(`The Title of Course Page is ${title}`)
   return (
     <>
 

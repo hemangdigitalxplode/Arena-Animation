@@ -252,7 +252,9 @@ const CourseDetails = ({ handleShow }) => {
         />
         <meta name="keywords" content={route?.keywords}></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-        <link rel="canonical" href={route?.path}></link>
+
+        {/* <link rel="canonical" href={route?.path}></link> */}
+        
       </Helmet>
       <CourseDetailsHeader
         title={courseDetail?.name}
