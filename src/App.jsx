@@ -85,7 +85,7 @@ function App() {
             <Route path="/recent-activities" element={<RecentActivities />} />
             <Route path="/rewards" element={<Awards />} />
             <Route path="/activity/:id" element={<ActivityDetails />} />
-            <Route path="/blog/:id" element={<Blog />} />
+            {/* <Route path="/blog/:id" element={<Blog />} /> */}
             <Route path="/thank-you" element={<Thankyou/>} />
             <Route path="/student-work" element={<StudentWork />} />
             <Route path="/terms-&-conditions" element={<TermsConditions/>} />

@@ -2,6 +2,7 @@ import React from 'react'
 import "./bloginner.scss";
 import { rewardsBanner } from "../../assets";
 import { Col, Container, Image, Row } from "react-bootstrap";
+import bannerImg from '../../assets/2d-animation-course.jpg'
 
 const Animation2D = () => {
     return (
@@ -17,7 +18,7 @@ const Animation2D = () => {
                         <Col sm={12} md={12} className="m-15 px-tb  pt-5">
                             <div className="article-img">
                                 <Image
-                                    src="https://img.freepik.com/free-photo/young-woman-working-animation-studio_23-2149208039.jpg?t=st=1721811392~exp=1721814992~hmac=703bc35894652e1961ece6fbf451dbfa4a60f2eaf818ab79528825c2be774c5c&w=1060"
+                                    src= {bannerImg}
                                     title=""
                                     alt=""
                                     width={"100%"}

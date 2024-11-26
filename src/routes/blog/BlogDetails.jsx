@@ -4,6 +4,8 @@ import "./blog.scss";
 import { rewardsBanner } from "../../assets";
 import { Col, Container, Image, Row,Breadcrumb } from "react-bootstrap";
 import { Helmet } from "react-helmet";
+import animation2D from '../../assets/2d-animation-course.jpg'
+import animation3D from  '../../assets/3d-animation.jpg'
 
 
 
@@ -46,7 +48,7 @@ function BlogDetails() {
           <Col sm={6} md={4} className="mt-5 wow fadeInUp" data-wow-delay=".4s" style={{ visibility: "visible",animationDelay: "0.4s",animationName: "fadeInUp",}}>
             <div className="blog-grid">
               <div className="blog-grid-img position-relative">
-              <Link to="/blog/3d-animation-course"> <img alt="img" src="https://img.freepik.com/free-photo/videographer-using-computer-with-chroma-key-mock-up-isolated-display-editing-video-audio-footage_482257-3410.jpg?t=st=1721811837~exp=1721815437~hmac=e5b52c568eeeaede41decb8ef6baf86b61e0ccf7310bac8034199a16158dc8ea&w=1380"/>
+              <Link to="/blog/3d-animation-course"> <img alt="img" src={animation3D}/>
               </Link> 
               </div>
               <div className="blog-grid-text p-4">
@@ -71,7 +73,7 @@ function BlogDetails() {
           <Col sm={6} md={4} className="mt-5 wow fadeInUp" data-wow-delay=".4s" style={{ visibility: "visible",animationDelay: "0.4s",animationName: "fadeInUp",}}>
             <div className="blog-grid">
               <div className="blog-grid-img position-relative">
-              <Link to="/blog/2d-animation-course"> <img alt="img" src="https://img.freepik.com/free-photo/young-woman-working-animation-studio_23-2149208039.jpg?t=st=1721811392~exp=1721814992~hmac=703bc35894652e1961ece6fbf451dbfa4a60f2eaf818ab79528825c2be774c5c&w=1060"/>
+              <Link to="/blog/2d-animation-course"> <img alt="img" src={animation2D}/>
               </Link> 
               </div>
               <div className="blog-grid-text p-4">
