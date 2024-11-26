@@ -65,9 +65,10 @@ function App() {
                  <Route path="/blog/get-the-basics-right" element={<GettheBasicsRight/>} />
                  <Route path="/blog/ux-designing" element={<Designing/>} />
                  <Route path="/blog/oscar-2020" element={<Oscar2020 />} />
+
                  {/* New blogs route created here */}
-                 <Route path="/blog/2d-animation-course" element={<Animation2D/>} />
-                 <Route path="/blog/3d-animation-course" element={<Animation3D/>} />
+                 <Route path="/blog/elevate-your-creativity-with-animation-delhi-ncrs" element={<Animation2D/>} />
+                 <Route path="/blog/choosing-animation-delhi-ncr-for-your-3d-animation-course" element={<Animation3D/>} />
 
                  
             <Route
