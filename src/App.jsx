@@ -67,7 +67,7 @@ function App() {
                  <Route path="/blog/oscar-2020" element={<Oscar2020 />} />
 
                  {/* New blogs route created here */}
-                 <Route path="/blog/elevate-your-creativity-with-animation-delhi-ncrs" element={<Animation2D/>} />
+                 <Route path="/blog/elevate-your-creativity-with-animation-delhi-ncr" element={<Animation2D/>} />
                  <Route path="/blog/choosing-animation-delhi-ncr-for-your-3d-animation-course" element={<Animation3D/>} />
 
                  
