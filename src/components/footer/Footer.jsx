@@ -336,6 +336,13 @@ const Footer = ({ centers, handleShow, handleCall, phoneNo }) => {
                   >
                     Terms & Conditions
                   </Link>
+                  <Link
+                    rel="canonical"
+                    to="/privacy-policy"
+                    className="customFont"
+                  >
+                    Privacy Policy
+                  </Link>
                 </div>
               </div>
             </Col>

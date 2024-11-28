@@ -15,6 +15,7 @@ import TermsConditions from "./components/TermsCondition/TermsConditions";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Animation2D from "./routes/blog/Animation2D";
 import Animation3D from "./routes/blog/Animation3D";
+import PrivacyPolicy from "./routes/PrivacyPolicy";
 const StudentLoan = lazy(() => import("./routes/studentLoan/StudentLoan"));
 const StudentWork = lazy(() => import("./containers/studentWork/StudentWork"));
 const Layout = lazy(() => import("./components/layout/Layout"));
@@ -91,6 +92,7 @@ function App() {
             <Route path="/student-work" element={<StudentWork />} />
             <Route path="/terms-&-conditions" element={<TermsConditions/>} />
             <Route path="/about-us" element={<AboutUs/>} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
             <Route
               path="/student-loan"
               element={<StudentLoan handleShow={handleShow} />}

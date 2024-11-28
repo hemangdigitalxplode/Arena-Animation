@@ -73,12 +73,12 @@ function BlogDetails() {
           <Col sm={6} md={4} className="mt-5 wow fadeInUp" data-wow-delay=".4s" style={{ visibility: "visible",animationDelay: "0.4s",animationName: "fadeInUp",}}>
             <div className="blog-grid">
               <div className="blog-grid-img position-relative">
-              <Link to="/blog/elevate-your-creativity-with-animation-delhi-ncrs"> <img alt="img" src={animation2D}/>
+              <Link to="/blog/elevate-your-creativity-with-animation-delhi-ncr"> <img alt="img" src={animation2D}/>
               </Link> 
               </div>
               <div className="blog-grid-text p-4">
                 <h3 className="h5 mb-3">
-                  <Link to="/blog/elevate-your-creativity-with-animation-delhi-ncrs">2D Animation Course in Noida</Link>
+                  <Link to="/blog/elevate-your-creativity-with-animation-delhi-ncr">2D Animation Course in Noida</Link>
                 </h3>
                 <p className="display-30">
                 Regarding skills in 2D animation, Animation Delhi NCR offers a unique opportunity and professionally trained animators in Noida
@@ -86,7 +86,7 @@ function BlogDetails() {
                 <div className="meta meta-style2">
                   <ul>
                     <li>
-                    <Link To="/blog/elevate-your-creativity-with-animation-delhi-ncrs"><i className="fas fa-calendar-alt"></i> {"20 Jul, 2024"}</Link>
+                    <Link To="/blog/elevate-your-creativity-with-animation-delhi-ncr"><i className="fas fa-calendar-alt"></i> {"20 Jul, 2024"}</Link>
                     </li>
 
                   </ul>
