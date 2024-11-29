@@ -11,8 +11,8 @@ const Header = ({ banners }) => {
   return (
     <>
       <Helmet>
-        <meta name="description" content="Helmet description" data-rh="true" />
-        <meta name="title" content="Helmet title" data-rh="true" />
+        {/* <meta name="description" content="Helmet description" data-rh="true" />
+        <meta name="title" content="Helmet title" data-rh="true" /> */}
       </Helmet>
       <Container fluid className="header">
         <LazyLoad height={"100%"} offset={300} className="newfile">

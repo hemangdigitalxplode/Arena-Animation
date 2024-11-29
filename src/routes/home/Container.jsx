@@ -83,7 +83,7 @@ const Container = ({ handleShow }) => {
               content="Give a boost to your career with animation courses with the top & best animation institute in Delhi & Noida only at Arena Animation. Enroll now & get expert faculty."
               data-rh="true"
             />
-            <meta name="title" content="Helmet title" data-rh="true" />
+           
           </Helmet>
           <SubHeader
             bestanimationcms={homePage?.best_animation_cms?.cms_contant}
