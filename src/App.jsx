@@ -37,7 +37,7 @@ const ActivityDetails = lazy(() =>
 const Blog = lazy(() => import("./routes/blog/BlogDetails"));
 const Placement = lazy(() => import("./routes/placement/Placement"));
 
-function App() {
+export function App() {
   const basename = document.querySelector("base")?.getAttribute("href") ?? "/";
   const [show, setShow] = useState(false);
 

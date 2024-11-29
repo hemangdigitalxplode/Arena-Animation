@@ -58,7 +58,7 @@ const StudentWork = ({ workImgs }) => {
                   lg={3}
                   xs={6}
                   key={img.id}
-                  className="mb-3 student-work-image "
+                  className="mb-3 student-work-image"
                 >
                   <img src={img.image} alt="student-work-arena-animation" className="imgTag" />
                 </Col>

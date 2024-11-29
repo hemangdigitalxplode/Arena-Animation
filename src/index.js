@@ -1,13 +1,43 @@
 import React, { Suspense } from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Circles } from "react-loader-spinner";
 import * as serviceWorker from './serviceWorker';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(
+//   <React.StrictMode>
+
+//     <Suspense
+//       fallback={
+//         <Circles
+//           height="120"
+//           width="120"
+//           color="#ffd800"
+//           ariaLabel="circles-loading"
+//           wrapperStyle={{
+//             display: "flex",
+//             justifyContent: "center",
+//             alignItems: "center",
+//             height: "100vh",
+//             backgroundColor: "#000",
+//           }}
+//           wrapperClass=""
+//           visible={true}
+//         />
+//       }
+//     >
+
+//       <App />
+//     </Suspense>
+//   </React.StrictMode>
+// );
+
+
+ReactDOM.hydrate(<>
+
   <React.StrictMode>
 
     <Suspense
@@ -33,7 +63,7 @@ root.render(
       <App />
     </Suspense>
   </React.StrictMode>
-);
+</>, document.getElementById('root'));
 
 
 serviceWorker.register();

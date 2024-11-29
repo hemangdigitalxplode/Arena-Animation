@@ -4,6 +4,9 @@
   "private": true,
   "homepage": "/",
   "dependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "@babel/register": "^7.25.9",
     "@emailjs/browser": "^3.11.0",
     "@react-google-maps/api": "^2.18.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -12,8 +15,10 @@
     "axios": "^1.3.5",
     "bootstrap": "^5.2.3",
     "date-fns": "^2.29.3",
+    "express": "^4.21.1",
     "formik": "^2.2.9",
     "gatsby-plugin-react-helmet": "^6.13.1",
+    "ignore-styles": "^5.0.1",
     "nodemailer": "^6.9.7",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
@@ -31,6 +36,7 @@
     "react-whatsapp": "^0.3.0",
     "sass": "^1.59.3",
     "sitemap-generator": "^8.5.1",
+    "ssr": "^6.2.82",
     "use-react-router-breadcrumbs": "^4.0.1",
     "web-vitals": "^2.1.4",
     "yup": "^1.1.1"
@@ -38,16 +44,14 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "npm run generate-sitemap && react-scripts build",
-    "postbuild": "react-snap",
+    
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "serve -s build",
     "generate-sitemap": "node generate-sitemap.js"
+     
   },
-  "reactSnap": {
-  "inlineCss": true,
-  "minifyHtml": true
-},
+  
   "eslintConfig": {
     "extends": [
       "react-app",
