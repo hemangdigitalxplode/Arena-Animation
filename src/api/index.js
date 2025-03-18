@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const url = "https://animationdelhincr.com/admin/api";
+// const url = "https://animationdelhincr.com/admin/api";
+const url = "https://animationdelhincr.com/admin-staging/api";
 // const url = "https://technolite.in/staging/arena/admin/api";
 
 const API = axios.create({

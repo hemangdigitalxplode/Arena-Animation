@@ -70,10 +70,10 @@ const Container = ({ handleShow }) => {
             <Header banners={homePage.banner} />
           </div>
           <Helmet>
-            <title>
+            {/* <title>
               Animation Courses in Delhi & Noida | Best Institute for Animation
               Courses
-            </title>
+            </title> */}
             <meta
               name="keywords"
               content="best animation institute, animation institute, animation institute in noida, animation courses in noida, animation institute in delhi, animation courses in delhi, best institute for animation in delhi, best institute for animation courses in delhi, top institute for animation courses in delhi, best institute for animation courses in noida, top institute for animation courses in noida, top institute for animation in delhi"

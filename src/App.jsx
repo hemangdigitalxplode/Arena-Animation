@@ -98,6 +98,7 @@ export function App() {
               element={<StudentLoan handleShow={handleShow} />}
             />
             <Route path="*" element={<Custom404/>}/>
+            <Route path="/404" element={<Custom404/>}/>
           </Route>
  
         </Routes>

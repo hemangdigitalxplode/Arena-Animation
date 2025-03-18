@@ -44,7 +44,7 @@ const CourseDetails = ({ handleShow }) => {
     },
     {
       title:
-        "Animation Courses | Best Animation Courses in Delhi & Noida - Arena Animation",
+        "Animation Courses Hello world | Best Animation Courses in Delhi & Noida - Arena Animation",
       description:
         "Visit Arena Animation to explore top-notch animation courses in Delhi & Noida. Reach out to us today to get yourself enroll for a promising career. ",
       path: "/course-details/animation-prime",
@@ -139,6 +139,38 @@ const CourseDetails = ({ handleShow }) => {
         "Choose from the best degree courses in VFX. Create amazing visual effects for movies and videos. Learn about advanced and modern tools. Join Arena Animation now.",
       path: "/course-details/degree-course-in-vfx",
     },
+    {
+      title: "2d Animation Course in Noida | 2d Animation Institute in Noida",
+      description: "Arena Animation provides an entry level 2D animation course in Noida at an affordable price. Create eye catching 2D animations for various things. Click here.",
+      path:"/course-details/2d-animation-course-in-noida",
+    },
+    {
+      title: "2d Animation Course | 2d Animation Institute | 2d Animation",
+      description: "Become a master of 2D animation with Arena Animation. Learn about various fundamentals of animation to pursue your dream. Develop your animation skills with us.",
+      path:"/course-details/2d-animation-course",
+    },
+    {
+      title: "Degree Courses in Gaming | Games Degree Course Institute in Delhi",
+      description: "Enroll in one of the best degree courses in gaming at Arena Animation. Master the skills of a top-notch game developer. Learn about game development and more.",
+      path:"/course-details/degree-courses-in-gaming",
+    },
+
+    {
+      title: "Degree Courses in Animation | Animation Degree Course in Delhi",
+      description: "Arena Animation is the best place to complete your degree in animation. Our degree courses in animation will help you to grow in the animation world. Enroll now.",
+      path:"/course-details/degree-courses-in-animation",
+    },
+    {
+      title: "2d Animation Course in Delhi | 2d Animation Institute in Delhi",
+      description: "Pursue your dream of an animator by enrolling in our 2D animation course in Delhi. Arena Animation offers a chance to showcase your skills. Visit our website.",
+      path:"/course-details/2d-animation-course-in-delhi",
+    },
+    {
+      title:'Arena Animation',
+      description:'Complete your animation with Arena Animation. Enhance your animation skills. Click here to learn more about the course.',
+      robots:'noindex, nofollow',
+      path:'/course-details/2d-animation'
+    }
   ];
   const location = useLocation();
   const route = routes.find((route) => route.path === location.pathname);
@@ -214,12 +246,18 @@ const CourseDetails = ({ handleShow }) => {
       });
   };
 
+  // setting the title of 2d-animation-course-in-noida
+  // Finding the route and make tit calling with the useEffect and set the tittle
+  
+
   useEffect(() => {
     window.scrollTo(0, 0);
     getCourse(courseId);
     getStudentWork();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [courseId]);
+
+  console.log(courseList)
 
   return loader ? (
     <Circles
@@ -251,6 +289,7 @@ const CourseDetails = ({ handleShow }) => {
           }
         />
         <meta name="keywords" content={route?.keywords}></meta>
+        <meta name="robots" content={route?.robots}></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 
         {/* <link rel="canonical" href={route?.path}></link> */}
