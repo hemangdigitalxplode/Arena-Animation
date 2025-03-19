@@ -11,11 +11,12 @@ import StudentWork from "../../containers/studentWork/StudentWork";
 import StudentsSpeak from "../../containers/studentsSpeak/StudentsSpeak";
 import AskedQuestions from "../../containers/askedQuestions/AskedQuestions";
 import CallBackForm from "../../containers/callBackForm/CallBackForm";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import API from "../../api";
 import { Container } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import NewFaq from "../../containers/NewFaq/NewFaq";
+import SEOHead from "../../components/SEOHead";
 
 const CourseDetails = ({ handleShow }) => {
   const routes = [
@@ -139,39 +140,40 @@ const CourseDetails = ({ handleShow }) => {
         "Choose from the best degree courses in VFX. Create amazing visual effects for movies and videos. Learn about advanced and modern tools. Join Arena Animation now.",
       path: "/course-details/degree-course-in-vfx",
     },
-    {
-      title: "2d Animation Course in Noida | 2d Animation Institute in Noida",
-      description: "Arena Animation provides an entry level 2D animation course in Noida at an affordable price. Create eye catching 2D animations for various things. Click here.",
-      path:"/course-details/2d-animation-course-in-noida",
-    },
+    // {
+    //   title: "2d Animation Course in Noida | 2d Animation Institute in Noida",
+    //   description: "Arena Animation provides an entry level 2D animation course in Noida at an affordable price. Create eye catching 2D animations for various things. Click here.",
+    //   path: "/course-details/2d-animation-course-in-noida",
+    // },
     {
       title: "2d Animation Course | 2d Animation Institute | 2d Animation",
       description: "Become a master of 2D animation with Arena Animation. Learn about various fundamentals of animation to pursue your dream. Develop your animation skills with us.",
-      path:"/course-details/2d-animation-course",
+      path: "/course-details/2d-animation-course",
     },
     {
       title: "Degree Courses in Gaming | Games Degree Course Institute in Delhi",
       description: "Enroll in one of the best degree courses in gaming at Arena Animation. Master the skills of a top-notch game developer. Learn about game development and more.",
-      path:"/course-details/degree-courses-in-gaming",
+      path: "/course-details/degree-courses-in-gaming",
     },
 
     {
       title: "Degree Courses in Animation | Animation Degree Course in Delhi",
       description: "Arena Animation is the best place to complete your degree in animation. Our degree courses in animation will help you to grow in the animation world. Enroll now.",
-      path:"/course-details/degree-courses-in-animation",
+      path: "/course-details/degree-courses-in-animation",
     },
     {
       title: "2d Animation Course in Delhi | 2d Animation Institute in Delhi",
       description: "Pursue your dream of an animator by enrolling in our 2D animation course in Delhi. Arena Animation offers a chance to showcase your skills. Visit our website.",
-      path:"/course-details/2d-animation-course-in-delhi",
+      path: "/course-details/2d-animation-course-in-delhi",
     },
     {
-      title:'Arena Animation',
-      description:'Complete your animation with Arena Animation. Enhance your animation skills. Click here to learn more about the course.',
-      robots:'noindex, nofollow',
-      path:'/course-details/2d-animation'
+      title: 'Arena Animation',
+      description: 'Complete your animation with Arena Animation. Enhance your animation skills. Click here to learn more about the course.',
+      robots: 'noindex, nofollow',
+      path: '/course-details/2d-animation'
     }
   ];
+  const { courseSlug } = useParams();
   const location = useLocation();
   const route = routes.find((route) => route.path === location.pathname);
   let slug = location.pathname.split("/");
@@ -182,11 +184,12 @@ const CourseDetails = ({ handleShow }) => {
   const [studentWork, setStudentWork] = useState(null);
   const [loader, setLoader] = useState(false);
   const [careerOption, setCareerOption] = useState("");
+  const [seoCoursedata, setSeoCourseData] = useState([])
   // FAQ questions here
-  const [newFaq,setNewFaq] = useState("")
+  const [newFaq, setNewFaq] = useState("")
   // console.log(courseList);
 
-  
+
   const getStudentWork = () => {
     setLoader(true);
     courseId && API.get("/home")
@@ -215,17 +218,17 @@ const CourseDetails = ({ handleShow }) => {
         }
       });
     }
-  }, [courseList, slug]); 
+  }, [courseList, slug]);
 
-    useEffect(() => {
-      API.get("/course")
-        .then((response) => {
-          setCourseList(response?.data?.data); 
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    }, []);
+  useEffect(() => {
+    API.get("/course")
+      .then((response) => {
+        setCourseList(response?.data?.data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
 
   const getCourse = (courseId) => {
     console.log("route");
@@ -246,9 +249,22 @@ const CourseDetails = ({ handleShow }) => {
       });
   };
 
+  useEffect(() => {
+    const fetchCourse = async () => {
+      try {
+        const response = await API.get(`/course/${courseId}`); 
+        setSeoCourseData(response?.data);
+      } catch (error) {
+        console.error('Error fetching course:', error);
+      }
+    };
+    fetchCourse();
+  }, [courseId]);
+  console.log(seoCoursedata)
+
   // setting the title of 2d-animation-course-in-noida
   // Finding the route and make tit calling with the useEffect and set the tittle
-  
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -276,7 +292,7 @@ const CourseDetails = ({ handleShow }) => {
     />
   ) : (
     <Container fluid className="course-details">
-      <Helmet>
+      {/* <Helmet>
         <title>
           {route?.title ||
             "Animation Courses in Delhi & Noida | Best Institute for Animation Courses"}
@@ -292,9 +308,13 @@ const CourseDetails = ({ handleShow }) => {
         <meta name="robots" content={route?.robots}></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 
-        {/* <link rel="canonical" href={route?.path}></link> */}
-        
+         
+
+      </Helmet> */}
+      <Helmet>
+        <title>{courseList?.data?.meta_title}</title>
       </Helmet>
+      <SEOHead course={seoCoursedata} />
       <CourseDetailsHeader
         title={courseDetail?.name}
         bgURL={courseDetail?.image}
@@ -307,7 +327,7 @@ const CourseDetails = ({ handleShow }) => {
       <CourseHighlights highlight={courseDetail?.course_highlight} />
       <WhatYouLearn courseTerms={courseDetail?.course_term} />
       <ToolsAndSoftware coursetools={courseDetail?.course_tool} />
-      {courseId!==null && <CareerOptions
+      {courseId !== null && <CareerOptions
         careerOptions={courseDetail?.course_career}
         careerOption={careerOption}
         handleShow={handleShow}
@@ -320,12 +340,12 @@ const CourseDetails = ({ handleShow }) => {
       <StudentWork workImgs={studentWork} />
       <StudentsSpeak />
 
-   
+
       {/* New Faq's here */}
       <NewFaq
-      newFaq={newFaq.course_faq}
+        newFaq={newFaq.course_faq}
       />
-    
+
       <CallBackForm />
     </Container>
   );
