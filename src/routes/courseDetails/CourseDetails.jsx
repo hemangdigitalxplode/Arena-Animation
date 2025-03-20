@@ -173,6 +173,7 @@ const CourseDetails = ({ handleShow }) => {
       path: '/course-details/2d-animation'
     }
   ];
+
   const { courseSlug } = useParams();
   const location = useLocation();
   const route = routes.find((route) => route.path === location.pathname);
@@ -252,7 +253,7 @@ const CourseDetails = ({ handleShow }) => {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const response = await API.get(`/course/${courseId}`); 
+        const response = await API.get(`/course/${courseId}`);
         setSeoCourseData(response?.data);
       } catch (error) {
         console.error('Error fetching course:', error);
@@ -261,6 +262,7 @@ const CourseDetails = ({ handleShow }) => {
     fetchCourse();
   }, [courseId]);
   console.log(seoCoursedata)
+  console.log(seoCoursedata?.data?.meta_title)
 
   // setting the title of 2d-animation-course-in-noida
   // Finding the route and make tit calling with the useEffect and set the tittle
@@ -314,7 +316,11 @@ const CourseDetails = ({ handleShow }) => {
       <Helmet>
         <title>{courseList?.data?.meta_title}</title>
       </Helmet>
-      <SEOHead course={seoCoursedata} />
+      <SEOHead
+        metaTitle={seoCoursedata?.data?.meta_title}
+        metaDescription={seoCoursedata?.data?.meta_description}
+        metaKeywords={seoCoursedata?.data?.meta_keyword} 
+        />
       <CourseDetailsHeader
         title={courseDetail?.name}
         bgURL={courseDetail?.image}
